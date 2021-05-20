@@ -9,17 +9,19 @@
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8 blog-main">
-      <% if (entrySize===0) { %>
+      <% if (entries.length===0) { %>
         <br> <h2>There are no entries.</h2> <br>
         <% } else { %>
+        <% for (var i = 0; i < entries.length; i++) { %>
       <div class="blog-post">
-        <h2 class="blog-post-title">Sample blog post</h2>
-        <p class="blog-post-meta">November 1, 2014 by <a href="#">Mark</a>     </p>
-        <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-        <a class = "btn btn-danger" href ="/deletePost"> Delete </a>
-        <a class = "btn btn-info" href ="/editPost"> Edit </a>
-      </div>
+        <h2 class="blog-post-title"> <%= entries[i].title %> </h2>
+        <p class="blog-post-meta"> <%= entries[i].post_date %> <a href="#"> by <%= entries[i].author %> </a></p>
+        <p> <%= entries[i].post_data %> </p>
+        <a class = "btn btn-danger" href = <%= "/deletePost/" + entries[i].id %>  > Delete </a>
+        <a class = "btn btn-info" href = <%= "/editPost/" + entries[i].id %>> Edit </a>
+      </div> 
       <% } %>
+    <% } %>
 
 
 
