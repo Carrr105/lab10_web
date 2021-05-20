@@ -1,7 +1,7 @@
 {
   "name": "ejs-blog-mongo",
   "version": "1.0.0",
-  "description": "",
+  "description": "En este laboratorio...",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,14 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.12",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carrr105/lab10_web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Carrr105/lab10_web/issues"
+  },
+  "homepage": "https://github.com/Carrr105/lab10_web#readme"
 }
