@@ -6,8 +6,9 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connection to db
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/crud-mongo-blog';
 
-mongoose.connect('mongodb://localhost/crud-mongo-blog' || process.env.MONGODB_URI,{
+mongoose.connect(mongoUri,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
