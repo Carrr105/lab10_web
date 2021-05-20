@@ -7,7 +7,7 @@ const app = express();
 
 // connection to db
 
-mongoose.connect('mongodb://localhost/crud-mongo-blog',{
+mongoose.connect('mongodb://localhost/crud-mongo-blog' || process.env.MONGODB_URI,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
