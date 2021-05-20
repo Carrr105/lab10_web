@@ -50,7 +50,6 @@ router.get('/deletePost/:id', async (req,res) =>{
   var id = req.params.id;
   var entry = await Entry.findById(id);
   isEdit = false;
-  console.log(isEdit);
   res.render('edit', {entry, isEdit});
 });
 
