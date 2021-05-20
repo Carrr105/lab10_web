@@ -1,16 +1,26 @@
 const { render } = require('ejs');
 const express = require('express');
 const router = express.Router();
-//const Task = require('../model/task');
+const Entry = require('../model/entry');
 
 
 router.get('/', async function(req,res){
-  res.render('index');
+  var entries = await Entry.find();
+  var entrySize = entries.length;
+  res.render('index', {Entry, entrySize});
 });
 
 
 router.get('/newPost', async (req,res) =>{
-  res.render('index');
+  res.render('newPost');
+});
+
+router.get('/editPost', async (req,res) =>{
+  res.render('edit');
+});
+
+router.get('/deletePost', async (req,res) =>{
+  res.render('edit');
 });
 
 
